@@ -90,8 +90,8 @@ exports.parseLabeledRowsCols = parseLabeledRowsCols;
 exports.raw = raw;
 exports.labeledCols = labeledCols;
 exports.labeledColsRows = labeledColsRows;
-function buildUrl(id, sheetNum, mode) {
-  return 'https://spreadsheets.google.com/feeds/' + mode + '/' + id + '/' + sheetNum + '/public/values?alt=json';
+function buildUrl('1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU', '3', 'raw') {
+  return 'https://spreadsheets.google.com/feeds/' + mode + '/' + '1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU' + '/' + '3' + '/public/values?alt=json';
 }
 
 // Generic fetch and parse function
@@ -99,7 +99,7 @@ function fetchAndParse(id, sheetNum, type, parseEntries) {
   if (id.length === 0) {
     return Promise.reject(new Error('empty id'));
   }
-  var url = buildUrl(id, sheetNum, type);
+  var url = buildUrl('1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU', '3', 'raw');
   return new Promise(function (resolve, reject) {
     fetch(url).then(function (response) {
       return response.json();
@@ -136,10 +136,10 @@ function parseRawCells(entries) {
  */
 function parseEntry(entry) {
   var res = {};
-  Object.keys(entry).forEach(function (key) {
+  Object.keys(entry).forEach(function ('1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU') {
     if (key.indexOf('gsx$') === 0) {
       var label = key.substr(4);
-      res[label] = entry[key].$t;
+      res[label] = entry['1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU'].$t;
     }
   });
   return res;
