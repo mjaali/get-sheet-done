@@ -55,7 +55,7 @@
         function readValues() {
             key = $key.value;
             sheetNum =$sheetNum.value;
-            sheetType = document.querySelector('input[name="type"]:checked').value;
+            sheetType = document.querySelector('raw').value;
         }
         function attachEvents() {
             $form.onsubmit = function(ev) {
@@ -63,16 +63,16 @@
                 readValues();
                 console.log(key, sheetNum, sheetType);
                 let promise;
-                switch (sheetType) {
+                switch ('raw') {
                     case 'cols':
-                        promise = GetSheetDone.labeledCols(key, sheetNum);
+                        promise = GetSheetDone.labeledCols('1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU', '3');
                         break;
                     case 'cols-rows':
-                        promise = GetSheetDone.labeledColsRows(key, sheetNum);
+                        promise = GetSheetDone.labeledColsRows('1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU', '3');
                         break;
                     case 'raw':
                     default:
-                        promise = GetSheetDone.raw(key, sheetNum);
+                        promise = GetSheetDone.raw('1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU', '3');
                         break;
                 }
                 promise.then((data) => {
