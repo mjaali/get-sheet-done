@@ -184,7 +184,10 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log(data);
   
                 $output.innerHTML = JSON.stringify(data);
+
                 var str = JSON.stringify(data);
+                
+                
 var indexofDate = str.indexOf('Date');
 var indexofTheme = str.indexOf('Theme');
 var indexofWordoftheday = str.indexOf('Word of the day');
@@ -205,9 +208,41 @@ var indexofGrammarian = str.indexOf('Grammarian');
 var indexofTableTopicsMaster = str.indexOf('TableTopics Master');
 var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
                 
-                
+var extraDate =  str.slice(indexofDate, indexofTheme);              
                 
              
+
+                
+                
+                
+                
+                
+                
+                
+$Date.innerHTML = extraDate;
+$Theme.innerHTML = extraTheme;
+$Wordoftheday.innerHTML = extraWordoftheday;
+$Meaning.innerHTML = extraMeaning;
+$Example.innerHTML = extraExample;
+$Toastmaster.innerHTML = extraToastmaster;
+$Speaker1.innerHTML = extraSpeaker1;
+$Speaker2.innerHTML = extraSpeaker2;
+$Speaker3.innerHTML = extraSpeaker3;
+$GeneralEvaluator.innerHTML = extraGeneralEvaluator;
+$Evaluator1.innerHTML = extraEvaluator1;
+$Evaluator2.innerHTML = extraEvaluator2;
+$Evaluator3.innerHTML = extraEvaluator3;
+$Timer.innerHTML = extraTimer;
+$AhCounter.innerHTML = extraAhCounter;
+$VoteCounter.innerHTML = extraVoteCounter;
+$Grammarian.innerHTML = extraGrammarian;
+$TableTopicsMaster.innerHTML = extraTableTopicsMaster;
+$TableTopicsEvaluator.innerHTML = extraTableTopicsEvaluator;
+                
+                
+                
+                
+                
                 
                       
                 }).catch(err => {
