@@ -19,7 +19,7 @@
     </form>
     <div>
         <div id="output">
-output2
+output3
       </div>
       
       
@@ -28,7 +28,10 @@ output2
       
       
       
-      
+            
+        <div id="Date">
+            Click to update role takers.
+        </div>
       
       
       
@@ -123,7 +126,6 @@ output2
             $sheetNum = document.getElementById('sheetNum'),
             $form = document.getElementById('theForm'),
             $output = document.getElementById('output'),
-              
 $Date= document.getElementById('Date'),
 $Theme= document.getElementById('Theme'),
 $Wordoftheday= document.getElementById('Wordoftheday'),
@@ -183,9 +185,10 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log('Data');
                     console.log(data);
   
-                $output.innerHTML = JSON.stringify(data);
-                
                 var str = JSON.stringify(data);
+
+                $output.innerHTML = str;
+                
                 
 var indexofDate = str.indexOf('Date');
 var indexofTheme = str.indexOf('Theme');
