@@ -4,7 +4,35 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- </head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #theForm {
+            border: 1px solid silver;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        #theForm > div {
+            margin-bottom: 10px;
+        }
+        .label {
+            display: inline-block;
+            width: 150px;
+        }
+        #key {
+            width: 400px;
+            max-width: 100%;
+        }
+        #output {
+            overflow: auto;
+        }
+        .checkboxGroup {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
 <body>
 
   
@@ -42,10 +70,9 @@
 
     <script src="https://sheets2.netlify.com/dist/GetSheetDone.js"></script>
     <script>
-        const $key = "1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU",
-            $sheetNum = "3",
+        const $key = document.getElementById('key'),
+            $sheetNum = document.getElementById('sheetNum'),
             $form = document.getElementById('theForm'),
-            $sheetType = "raw",
             $output = document.getElementById('output');
         let key,
             sheetNum,
@@ -61,14 +88,26 @@
         function readValues() {
             key = $key.value;
             sheetNum =$sheetNum.value;
+            sheetType = document.querySelector('input[name="type"]:checked').value;
         }
         function attachEvents() {
             $form.onsubmit = function(ev) {
                 ev.preventDefault();
                 readValues();
                 console.log(key, sheetNum, sheetType);
-                promise = GetSheetDone.raw(key, sheetNum);
-            }
+                let promise;
+                switch (sheetType) {
+                    case 'cols':
+                        promise = GetSheetDone.labeledCols(key, sheetNum);
+                        break;
+                    case 'cols-rows':
+                        promise = GetSheetDone.labeledColsRows(key, sheetNum);
+                        break;
+                    case 'raw':
+                    default:
+                        promise = GetSheetDone.raw(key, sheetNum);
+                        break;
+                }
                 promise.then((data) => {
                     console.log('Data');
                     console.log(data);
