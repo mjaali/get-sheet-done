@@ -69,11 +69,11 @@
                     console.log('Data');
                     console.log(data);
                                
-                var str = JSON.stringify(data).split('[').split(']').split('"');
+                var str = JSON.stringify(data);
              //   str.indexOf('Theme');
-            
+                var strOut = str.split('[').split(']').split('"');           
                 
-                    $output.innerHTML = str;
+                    $output.innerHTML = strOut;
                       
                 }).catch(err => {
                     console.log('Error');
