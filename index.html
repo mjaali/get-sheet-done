@@ -185,6 +185,7 @@ $Date= document.getElementById('Date'),
                     console.log('Data');
                     console.log(data);
   
+      $output.innerHTML = JSON.stringify(data);
 
               var str = JSON.stringify(data);
     
@@ -209,7 +210,7 @@ var indexofTheme = str.indexOf('Theme');
 //var indexofTableTopicsMaster = str.indexOf('TableTopics Master');
 //var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
                 
-var extraDate =  str.slice(indexofDate, indexofTheme);              
+var extraDate =  str.slice(95, 120);              
                 
              
 
@@ -217,7 +218,6 @@ var extraDate =  str.slice(indexofDate, indexofTheme);
                 
                 
                 
-      $output.innerHTML = JSON.stringify(data);
           
                 
                 
