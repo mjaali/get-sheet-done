@@ -9,16 +9,9 @@
 
   
 
-    <form id="theForm">
-      <div style="display: none;">
-          <input id="key" value="1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU"/>
-                <input id="sheetNum" type="number" value="3"/>
-                    <input type="radio" name="type" value="raw" checked/>
-      </div>
-            <button type="submit">Go91</button>
-    </form>
     <div>
         <div id="output">
+          92
       </div>
       
       
@@ -150,22 +143,14 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
             sheetNum,
             sheetType;
         attachEvents();
-        // GetSheetDone(KEY, 1, false, true).then((data) => {
-        //     console.log('Data');
-        //     console.log(JSON.stringify(data));
-        // }).catch(err => {
-        //     console.log('Error');
-        //     console.log(err);
-        // })
-        function readValues() {
-            key = "1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU";
-            sheetNum = "3";
-            sheetType = "raw";
-        }
-        function attachEvents() {
+
+          var  key = "1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU";
+          var  sheetNum = "3";
+          var   sheetType = "raw";
+
+      function attachEvents() {
            function(ev) {
                 ev.preventDefault();
-                readValues();
                 console.log(key, sheetNum, sheetType);
                 let promise;
                 switch (sheetType) {
