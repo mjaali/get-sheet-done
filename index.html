@@ -69,17 +69,8 @@
               promise.then((data) => {
                     console.log('Data');
                     console.log(data);
-                
-                var divLength = $JSON.stringify(data).length;
-                
-                var str = '';
-for(var i=0; i<divLength; i++){
-  str += "Div #" + i + ", ";
-  console.log(str);
-}
-                
-                
-                
+                               
+                var str = JSON.stringify(data);
                     $output.innerHTML = str;
                       
                 }).catch(err => {
