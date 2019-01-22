@@ -70,7 +70,9 @@
                     console.log(data);
                                
                 var str = JSON.stringify(data);
-                    $output.innerHTML = str;
+                var strCon = str[0].concat(str[1], str[2]);
+                
+                    $output.innerHTML = strCon;
                       
                 }).catch(err => {
                     console.log('Error');
