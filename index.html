@@ -64,7 +64,7 @@
             sheetType = $sheetType.value;
         }
         function attachEvents() {
-            $window.onload = function(ev) {
+            $form.onsumbit = function(ev) {
                 ev.preventDefault();
                 readValues();
                 console.log(key, sheetNum, sheetType);
