@@ -15,7 +15,7 @@
                 <input id="sheetNum" type="number" value="3"/>
                     <input type="radio" name="type" value="raw" checked/>
       </div>
-            <button type="submit">Go4</button>
+            <button type="submit">Go5</button>
     </form>
     <div>
         <div id="output">
@@ -185,11 +185,12 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log('Data');
                     console.log(data);
   
-                var str = JSON.stringify(data).replace('"', "").replace("]", "").replace("[", "").replace(",", "").replace(":", "");
+              //  var str = JSON.stringify(data).replace("]", "").replace("[", "").replace(",", "").replace(":", "");
+                var str = JSON.stringify(data);
 
               //  $output.innerHTML = str;
                 
-    $output.innerHTML = JSON.stringify(data)[5][1];
+    $output.innerHTML = str[1][1];
 
 var indexofDate = str.indexOf('Date');
 var indexofTheme = str.indexOf('Theme');
