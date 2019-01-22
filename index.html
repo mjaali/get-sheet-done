@@ -19,7 +19,8 @@
     </form>
     <div>
         <div id="output">
-output5      </div>
+output6
+      </div>
       
       
       
@@ -184,7 +185,7 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log('Data');
                     console.log(data);
   
-                var str = JSON.stringify(data).replace('"', '').replace(']', '').replace('[', '').replace(',', '').replace(':', '');
+                var str = JSON.stringify(data).replace("""", "").replace("]", "").replace("[", "").replace(",", "").replace(":", "");
 
                 $output.innerHTML = str;
                 
