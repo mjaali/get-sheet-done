@@ -125,24 +125,24 @@
             $output = document.getElementById('output'),
               
 $Date= document.getElementById('Date'),
-$Theme= document.getElementById('Theme'),
-$Wordoftheday= document.getElementById('Wordoftheday'),
-$Meaning= document.getElementById('Meaning'),
-$Example= document.getElementById('Example'),
-$Toastmaster= document.getElementById('Toastmaster'),
-$Speaker1= document.getElementById('Speaker1'),
-$Speaker2= document.getElementById('Speaker2'),
-$Speaker3= document.getElementById('Speaker3'),
-$GeneralEvaluator= document.getElementById('GeneralEvaluator'),
-$Evaluator1= document.getElementById('Evaluator1'),
-$Evaluator2= document.getElementById('Evaluator2'),
-$Evaluator3= document.getElementById('Evaluator3'),
-$Timer= document.getElementById('Timer'),
-$AhCounter= document.getElementById('AhCounter'),
-$VoteCounter= document.getElementById('VoteCounter'),
-$Grammarian= document.getElementById('Grammarian'),
-$TableTopicsMaster= document.getElementById('TableTopicsMaster'),
-$TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
+//$Theme= document.getElementById('Theme'),
+//$Wordoftheday= document.getElementById('Wordoftheday'),
+//$Meaning= document.getElementById('Meaning'),
+//$Example= document.getElementById('Example'),
+//$Toastmaster= document.getElementById('Toastmaster'),
+//$Speaker1= document.getElementById('Speaker1'),
+//$Speaker2= document.getElementById('Speaker2'),
+//$Speaker3= document.getElementById('Speaker3'),
+//$GeneralEvaluator= document.getElementById('GeneralEvaluator'),
+//$Evaluator1= document.getElementById('Evaluator1'),
+//$Evaluator2= document.getElementById('Evaluator2'),
+//$Evaluator3= document.getElementById('Evaluator3'),
+//$Timer= document.getElementById('Timer'),
+//$AhCounter= document.getElementById('AhCounter'),
+//$VoteCounter= document.getElementById('VoteCounter'),
+//$Grammarian= document.getElementById('Grammarian'),
+//$TableTopicsMaster= document.getElementById('TableTopicsMaster'),
+//$TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
       
       
         let key,
@@ -184,8 +184,7 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log(data);
   
 
-                var str = JSON.stringify(data);
-                            $output.innerHTML = str;
+              var str = JSON.stringify(data);
     
                 
 var indexofDate = str.indexOf('Date');
@@ -242,7 +241,8 @@ $Date.innerHTML = extraDate;
                 
                 
                 
-                
+                                    $output.innerHTML = JSON.stringify(data);
+        
                 
                       
                 }).catch(err => {
