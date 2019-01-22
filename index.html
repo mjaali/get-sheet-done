@@ -22,6 +22,8 @@
         <div id="output">
             ...
         </div>
+      <div id="box">
+      </div>
     </div>
 
     <script src="https://sheets2.netlify.com/dist/GetSheetDone.js"></script>
@@ -75,6 +77,21 @@
                 })
             }
         }
-    </script>
+  
+      var html = "<table border='1|1'>";
+for (var i = 0; i < $output.length; i++) {
+    html+="<tr>";
+    html+="<td>"+rows[i].role+"</td>";
+    html+="<td>"+rows[i].name+"</td>";
+
+    html+="</tr>";
+
+}
+html+="</table>";
+document.getElementById("box").innerHTML = html;
+  
+  
+  </script>
+  
 </body>
 </html>
