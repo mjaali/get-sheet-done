@@ -69,7 +69,7 @@
                 promise.then((data) => {
                     console.log('Data');
                     console.log(data);
-                    $output.innerHTML = JSON.stringify(data).split(":");
+                    $output.innerHTML = JSON.stringify(data)[0][0];
                 }).catch(err => {
                     console.log('Error');
                     console.log(err);
