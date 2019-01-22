@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -20,8 +19,8 @@
     </form>
     <div>
         <div id="output">
-          output
-        </div>
+output2
+      </div>
       
       
       
@@ -123,9 +122,27 @@
         const $key = document.getElementById('key'),
             $sheetNum = document.getElementById('sheetNum'),
             $form = document.getElementById('theForm'),
-            $output = document.getElementById('output');
+            $output = document.getElementById('output'),
               
-
+$Date= document.getElementById('Date'),
+$Theme= document.getElementById('Theme'),
+$Wordoftheday= document.getElementById('Wordoftheday'),
+$Meaning= document.getElementById('Meaning'),
+$Example= document.getElementById('Example'),
+$Toastmaster= document.getElementById('Toastmaster'),
+$Speaker1= document.getElementById('Speaker1'),
+$Speaker2= document.getElementById('Speaker2'),
+$Speaker3= document.getElementById('Speaker3'),
+$GeneralEvaluator= document.getElementById('GeneralEvaluator'),
+$Evaluator1= document.getElementById('Evaluator1'),
+$Evaluator2= document.getElementById('Evaluator2'),
+$Evaluator3= document.getElementById('Evaluator3'),
+$Timer= document.getElementById('Timer'),
+$AhCounter= document.getElementById('AhCounter'),
+$VoteCounter= document.getElementById('VoteCounter'),
+$Grammarian= document.getElementById('Grammarian'),
+$TableTopicsMaster= document.getElementById('TableTopicsMaster'),
+$TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
       
       
         let key,
@@ -167,7 +184,82 @@
                     console.log(data);
   
                 $output.innerHTML = JSON.stringify(data);
+                
+                var str = JSON.stringify(data);
+                
+var indexofDate = str.indexOf('Date');
+var indexofTheme = str.indexOf('Theme');
+var indexofWordoftheday = str.indexOf('Word of the day');
+var indexofMeaning = str.indexOf('Meaning');
+var indexofExample = str.indexOf('Example');
+var indexofToastmaster = str.indexOf('Toastmaster');
+var indexofSpeaker1 = str.indexOf('Speaker 1');
+var indexofSpeaker2 = str.indexOf('Speaker 2');
+var indexofSpeaker3 = str.indexOf('Speaker 3');
+var indexofGeneralEvaluator = str.indexOf('General Evaluator');
+var indexofEvaluator1 = str.indexOf('Evaluator 1');
+var indexofEvaluator2 = str.indexOf('Evaluator 2');
+var indexofEvaluator3 = str.indexOf('Evaluator 3');
+var indexofTimer = str.indexOf('Timer');
+var indexofAhCounter = str.indexOf('Ah Counter');
+var indexofVoteCounter = str.indexOf('Vote Counter');
+var indexofGrammarian = str.indexOf('Grammarian');
+var indexofTableTopicsMaster = str.indexOf('TableTopics Master');
+var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
 
+
+                
+                
+                
+var extraDate = str.slice(indexofDate, indexofTheme);
+var extraTheme = str.slice(indexofTheme, indexofWordoftheday);
+var extraWordoftheday = str.slice(indexofWordoftheday, indexofMeaning);
+var extraMeaning = str.slice(indexofMeaning, indexofExample);
+var extraExample = str.slice(indexofExample, indexofToastmaster);
+var extraToastmaster = str.slice(indexofToastmaster, indexofSpeaker1);
+var extraSpeaker1 = str.slice(indexofSpeaker1, indexofSpeaker2);
+var extraSpeaker2 = str.slice(indexofSpeaker2, indexofSpeaker3);
+var extraSpeaker3 = str.slice(indexofSpeaker3, indexofGeneralEvaluator);
+var extraGeneralEvaluator = str.slice(indexofGeneralEvaluator, indexofEvaluator1);
+var extraEvaluator1 = str.slice(indexofEvaluator1, indexofEvaluator2);
+var extraEvaluator2 = str.slice(indexofEvaluator2, indexofEvaluator3);
+var extraEvaluator3 = str.slice(indexofEvaluator3, indexofTimer);
+var extraTimer = str.slice(indexofTimer, indexofAhCounter);
+var extraAhCounter = str.slice(indexofAhCounter, indexofVoteCounter);
+var extraVoteCounter = str.slice(indexofVoteCounter, indexofGrammarian);
+var extraGrammarian = str.slice(indexofGrammarian, indexofTableTopicsMaster);
+var extraTableTopicsMaster = str.slice(indexofTableTopicsMaster, indexofTableTopicsEvaluator);
+var extraTableTopicsEvaluator = str.slice(indexofTableTopicsEvaluator, 795);
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+$Date.innerHTML = extraDate;
+$Theme.innerHTML = extraTheme;
+$Word of the day.innerHTML = extraWordoftheday;
+$Meaning.innerHTML = extraMeaning;
+$Example.innerHTML = extraExample;
+$Toastmaster.innerHTML = extraToastmaster;
+$Speaker1.innerHTML = extraSpeaker1;
+$Speaker2.innerHTML = extraSpeaker2;
+$Speaker3.innerHTML = extraSpeaker3;
+$General Evaluator.innerHTML = extraGeneralEvaluator;
+$Evaluator1.innerHTML = extraEvaluator1;
+$Evaluator2.innerHTML = extraEvaluator2;
+$Evaluator3.innerHTML = extraEvaluator3;
+$Timer.innerHTML = extraTimer;
+$AhCounter.innerHTML = extraAhCounter;
+$VoteCounter.innerHTML = extraVoteCounter;
+$Grammarian.innerHTML = extraGrammarian;
+$TableTopicsMaster.innerHTML = extraTableTopicsMaster;
+$TableTopicsEvaluator.innerHTML = extraTableTopicsEvaluator;
                 
              
                 
