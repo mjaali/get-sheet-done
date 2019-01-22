@@ -69,7 +69,7 @@
                     console.log('Data');
                     console.log(data);
                                
-                var str = JSON.stringify(data).indexOf('Theme');
+                var str = JSON.stringify(data).split('[').split(']').split('"');
              //   str.indexOf('Theme');
             
                 
