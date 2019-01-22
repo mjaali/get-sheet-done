@@ -69,15 +69,7 @@
                 promise.then((data) => {
                     console.log('Data');
                     console.log(data);
-                    $output.innerHTML = JSON.stringify(data).concat(JSON.stringify(data)[0][1], JSON.stringify(data)[0][2], JSON.stringify(data)[0][3], 
-                                                                    JSON.stringify(data)[0][4], JSON.stringify(data)[0][5], JSON.stringify(data)[0][6], 
-                                                                    JSON.stringify(data)[0][7], JSON.stringify(data)[0][8], JSON.stringify(data)[0][9], 
-                                                                    JSON.stringify(data)[0][10], JSON.stringify(data)[0][11], JSON.stringify(data)[0][12], 
-                                                                    JSON.stringify(data)[0][13], JSON.stringify(data)[0][14], JSON.stringify(data)[0][15], 
-                                                                    JSON.stringify(data)[0][16], JSON.stringify(data)[0][17], JSON.stringify(data)[0][18], 
-                                                                    JSON.stringify(data)[0][19], JSON.stringify(data)[0][20], JSON.stringify(data)[0][21], 
-                                                                    JSON.stringify(data)[0][22], JSON.stringify(data)[0][23], JSON.stringify(data)[0][24], 
-                                                                    JSON.stringify(data)[0][25], JSON.stringify(data)[0][26], JSON.stringify(data)[0][27])
+                    $output.innerHTML = JSON.stringify(data).concat(JSON.stringify(data)[0][1], JSON.stringify(data)[0][2], JSON.stringify(data)[0][3])
                 }).catch(err => {
                     console.log('Error');
                     console.log(err);
