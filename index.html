@@ -61,10 +61,9 @@
         function readValues() {
             key = $key.value;
             sheetNum =$sheetNum.value;
-            sheetType = $sheetType.value;
         }
         function attachEvents() {
-            $form.onsumbit = function(ev) {
+            $form.onsubmit = function(ev) {
                 ev.preventDefault();
                 readValues();
                 console.log(key, sheetNum, sheetType);
