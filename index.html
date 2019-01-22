@@ -22,6 +22,99 @@
         <div id="output">
             Click to update role takers.
         </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <div id="Theme">
+            Click to update role takers.
+        </div>
+      
+        <div id="Wordoftheday">
+            Click to update role takers.
+        </div>
+      
+        <div id="Meaning">
+            Click to update role takers.
+        </div>
+      
+        <div id="Example">
+            Click to update role takers.
+        </div>
+      
+        <div id="Toastmaster">
+            Click to update role takers.
+        </div>
+      
+        <div id="Speaker1">
+            Click to update role takers.
+        </div>
+      
+        <div id="Speaker2">
+            Click to update role takers.
+        </div>
+      
+        <div id="Speaker3">
+            Click to update role takers.
+        </div>
+      
+        <div id="GeneralEvaluator">
+            Click to update role takers.
+        </div>
+      
+        <div id="Evaluator1">
+            Click to update role takers.
+        </div>
+      
+        <div id="Evaluator2">
+            Click to update role takers.
+        </div>
+      
+        <div id="Evaluator3">
+            Click to update role takers.
+        </div>
+      
+        <div id="Timer">
+            Click to update role takers.
+        </div>
+      
+        <div id="AhCounter">
+            Click to update role takers.
+        </div>
+      
+        <div id="VoteCounter">
+            Click to update role takers.
+        </div>
+      
+        <div id="Grammarian">
+            Click to update role takers.
+        </div>
+      
+        <div id="TableTopicsMaster">
+            Click to update role takers.
+        </div>
+      
+        <div id="TableTopicsEvaluator">
+            Click to update role takers.
+        </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
     </div>
 
@@ -30,7 +123,36 @@
         const $key = document.getElementById('key'),
             $sheetNum = document.getElementById('sheetNum'),
             $form = document.getElementById('theForm'),
-            $output = document.getElementById('output');
+            $output = document.getElementById('output'),
+      
+$Date= document.getElementById('Date'),
+$Theme= document.getElementById('Theme'),
+$Wordoftheday= document.getElementById('Wordoftheday'),
+$Meaning= document.getElementById('Meaning'),
+$Example= document.getElementById('Example'),
+$Toastmaster= document.getElementById('Toastmaster'),
+$Speaker1= document.getElementById('Speaker1'),
+$Speaker2= document.getElementById('Speaker2'),
+$Speaker3= document.getElementById('Speaker3'),
+$GeneralEvaluator= document.getElementById('GeneralEvaluator'),
+$Evaluator1= document.getElementById('Evaluator1'),
+$Evaluator2= document.getElementById('Evaluator2'),
+$Evaluator3= document.getElementById('Evaluator3'),
+$Timer= document.getElementById('Timer'),
+$AhCounter= document.getElementById('AhCounter'),
+$VoteCounter= document.getElementById('VoteCounter'),
+$Grammarian= document.getElementById('Grammarian'),
+$TableTopicsMaster= document.getElementById('TableTopicsMaster'),
+$TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
+      
+      
+      
+      
+      
+      
+      
+      
+      
         let key,
             sheetNum,
             sheetType;
@@ -70,8 +192,30 @@
                     console.log(data);
                                
                 var str = JSON.stringify(data);
-             //   str.indexOf('Theme');
-                var strOut = str.split('');           
+
+var indexofDate = str.indexOf('Date');
+var indexofTheme = str.indexOf('Theme');
+var indexofWordoftheday = str.indexOf('Word of the day');
+var indexofMeaning = str.indexOf('Meaning');
+var indexofExample = str.indexOf('Example');
+var indexofToastmaster = str.indexOf('Toastmaster');
+var indexofSpeaker1 = str.indexOf('Speaker 1');
+var indexofSpeaker2 = str.indexOf('Speaker 2');
+var indexofSpeaker3 = str.indexOf('Speaker 3');
+var indexofGeneralEvaluator = str.indexOf('General Evaluator');
+var indexofEvaluator1 = str.indexOf('Evaluator 1');
+var indexofEvaluator2 = str.indexOf('Evaluator 2');
+var indexofEvaluator3 = str.indexOf('Evaluator 3');
+var indexofTimer = str.indexOf('Timer');
+var indexofAhCounter = str.indexOf('Ah Counter');
+var indexofVoteCounter = str.indexOf('Vote Counter');
+var indexofGrammarian = str.indexOf('Grammarian');
+var indexofTableTopicsMaster = str.indexOf('TableTopics Master');
+var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
+                
+                
+                
+             
                 
                     $output.innerHTML = strOut;
                       
