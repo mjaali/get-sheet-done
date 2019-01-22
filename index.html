@@ -184,7 +184,7 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log('Data');
                     console.log(data);
   
-                var str = JSON.stringify(data);
+                var str = JSON.stringify(data).replace('"', '').replace(']', '').replace('[', '').replace(',', '').replace(':', '');
 
                 $output.innerHTML = str;
                 
@@ -213,25 +213,25 @@ var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
                 
                 
                 
-var extraDate = str.slice(indexofDate, indexofTheme);
-var extraTheme = str.slice(indexofTheme, indexofWordoftheday);
-var extraWordoftheday = str.slice(indexofWordoftheday, indexofMeaning);
-var extraMeaning = str.slice(indexofMeaning, indexofExample);
-var extraExample = str.slice(indexofExample, indexofToastmaster);
-var extraToastmaster = str.slice(indexofToastmaster, indexofSpeaker1);
-var extraSpeaker1 = str.slice(indexofSpeaker1, indexofSpeaker2);
-var extraSpeaker2 = str.slice(indexofSpeaker2, indexofSpeaker3);
-var extraSpeaker3 = str.slice(indexofSpeaker3, indexofGeneralEvaluator);
-var extraGeneralEvaluator = str.slice(indexofGeneralEvaluator, indexofEvaluator1);
-var extraEvaluator1 = str.slice(indexofEvaluator1, indexofEvaluator2);
-var extraEvaluator2 = str.slice(indexofEvaluator2, indexofEvaluator3);
-var extraEvaluator3 = str.slice(indexofEvaluator3, indexofTimer);
-var extraTimer = str.slice(indexofTimer, indexofAhCounter);
-var extraAhCounter = str.slice(indexofAhCounter, indexofVoteCounter);
-var extraVoteCounter = str.slice(indexofVoteCounter, indexofGrammarian);
-var extraGrammarian = str.slice(indexofGrammarian, indexofTableTopicsMaster);
-var extraTableTopicsMaster = str.slice(indexofTableTopicsMaster, indexofTableTopicsEvaluator);
-var extraTableTopicsEvaluator = str.slice(indexofTableTopicsEvaluator, 795);
+var extraDate = str.slice(indexofDate +4, indexofTheme);
+var extraTheme = str.slice(indexofTheme +5, indexofWordoftheday);
+var extraWordoftheday = str.slice(indexofWordoftheday +15, indexofMeaning);
+var extraMeaning = str.slice(indexofMeaning +7, indexofExample);
+var extraExample = str.slice(indexofExample +7, indexofToastmaster);
+var extraToastmaster = str.slice(indexofToastmaster +11, indexofSpeaker1);
+var extraSpeaker1 = str.slice(indexofSpeaker1 +9, indexofSpeaker2);
+var extraSpeaker2 = str.slice(indexofSpeaker2 +9, indexofSpeaker3);
+var extraSpeaker3 = str.slice(indexofSpeaker3 +9, indexofGeneralEvaluator);
+var extraGeneralEvaluator = str.slice(indexofGeneralEvaluator +17, indexofEvaluator1);
+var extraEvaluator1 = str.slice(indexofEvaluator1 +11, indexofEvaluator2);
+var extraEvaluator2 = str.slice(indexofEvaluator2 +11, indexofEvaluator3);
+var extraEvaluator3 = str.slice(indexofEvaluator3 +11, indexofTimer);
+var extraTimer = str.slice(indexofTimer +5, indexofAhCounter);
+var extraAhCounter = str.slice(indexofAhCounter +10, indexofVoteCounter);
+var extraVoteCounter = str.slice(indexofVoteCounter +12, indexofGrammarian);
+var extraGrammarian = str.slice(indexofGrammarian +10, indexofTableTopicsMaster);
+var extraTableTopicsMaster = str.slice(indexofTableTopicsMaster +18, indexofTableTopicsEvaluator);
+var extraTableTopicsEvaluator = str.slice(indexofTableTopicsEvaluator +21, str.length);
                 
                 
                 
