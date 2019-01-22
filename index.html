@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+  
+
+    <form id="theForm">
+      <div style="display: none;">
+          <input id="key" value="1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU"/>
+                <input id="sheetNum" type="number" value="3"/>
+                    <input type="radio" name="type" value="raw" checked/>
+      </div>
+            <button type="submit">Go91</button>
+    </form>
+    <div>
+        <div id="output">
+      </div>
+      
+      
+      
+      
+      
+      
+      
+            
+        <div id="Date">
+            Click to update role takers.
+        </div>
+      
+      
+      
+        <div id="Theme">
+            Click to update role takers.
+        </div>
+      
+        <div id="Wordoftheday">
+            Click to update role takers.
+        </div>
+      
+        <div id="Meaning">
+            Click to update role takers.
+        </div>
+      
+        <div id="Example">
+            Click to update role takers.
+        </div>
+      
+        <div id="Toastmaster">
+            Click to update role takers.
+        </div>
+      
+        <div id="Speaker1">
+            Click to update role takers.
+        </div>
+      
+        <div id="Speaker2">
+            Click to update role takers.
+        </div>
+      
+        <div id="Speaker3">
+            Click to update role takers.
+        </div>
+      
+        <div id="GeneralEvaluator">
+            Click to update role takers.
+        </div>
+      
+        <div id="Evaluator1">
+            Click to update role takers.
+        </div>
+      
+        <div id="Evaluator2">
+            Click to update role takers.
+        </div>
+      
+        <div id="Evaluator3">
+            Click to update role takers.
+        </div>
+      
+        <div id="Timer">
+            Click to update role takers.
+        </div>
+      
+        <div id="AhCounter">
+            Click to update role takers.
+        </div>
+      
+        <div id="VoteCounter">
+            Click to update role takers.
+        </div>
+      
+        <div id="Grammarian">
+            Click to update role takers.
+        </div>
+      
+        <div id="TableTopicsMaster">
+            Click to update role takers.
+        </div>
+      
+        <div id="TableTopicsEvaluator">
+            Click to update role takers.
+        </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </div>
+
+    <script src="https://sheets2.netlify.com/dist/GetSheetDone.js"></script>
+    <script>
+        const $key = document.getElementById('key'),
+            $sheetNum = document.getElementById('sheetNum'),
+            $form = document.getElementById('theForm'),
+            $output = document.getElementById('output'),
+$Date= document.getElementById('Date'),
+$Theme= document.getElementById('Theme'),
+$Wordoftheday= document.getElementById('Wordoftheday'),
+$Meaning= document.getElementById('Meaning'),
+$Example= document.getElementById('Example'),
+$Toastmaster= document.getElementById('Toastmaster'),
+$Speaker1= document.getElementById('Speaker1'),
+$Speaker2= document.getElementById('Speaker2'),
+$Speaker3= document.getElementById('Speaker3'),
+$GeneralEvaluator= document.getElementById('GeneralEvaluator'),
+$Evaluator1= document.getElementById('Evaluator1'),
+$Evaluator2= document.getElementById('Evaluator2'),
+$Evaluator3= document.getElementById('Evaluator3'),
+$Timer= document.getElementById('Timer'),
+$AhCounter= document.getElementById('AhCounter'),
+$VoteCounter= document.getElementById('VoteCounter'),
+$Grammarian= document.getElementById('Grammarian'),
+$TableTopicsMaster= document.getElementById('TableTopicsMaster'),
+$TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
+      
+      
+        let key,
+            sheetNum,
+            sheetType;
+        attachEvents();
+        // GetSheetDone(KEY, 1, false, true).then((data) => {
+        //     console.log('Data');
+        //     console.log(JSON.stringify(data));
+        // }).catch(err => {
+        //     console.log('Error');
+        //     console.log(err);
+        // })
+        function readValues() {
+            key = "1c96by52K7EIkxi-MLlfX2lUQSgljn6xNy4HWiENLmyU";
+            sheetNum = "3";
+            sheetType = "raw";
+        }
+        function attachEvents() {
+           function(ev) {
+                ev.preventDefault();
+                readValues();
+                console.log(key, sheetNum, sheetType);
+                let promise;
+                switch (sheetType) {
+                    case 'cols':
+                        promise = GetSheetDone.labeledCols(key, sheetNum);
+                        break;
+                    case 'cols-rows':
+                        promise = GetSheetDone.labeledColsRows(key, sheetNum);
+                        break;
+                    case 'raw':
+                    default:
+                        promise = GetSheetDone.raw(key, sheetNum);
+                        break;
+                }
+              promise.then((data) => {
+                    console.log('Data');
+                    console.log(data);
+  
+                var str = JSON.stringify(data).replace("]", "").replace("[", "").replace(",", "").replace(":", "");
+     
+     // to view fill output           $output.innerHTML = str;
+                
+
+var indexofDate = str.indexOf('Date');
+var indexofTheme = str.indexOf('Theme');
+var indexofWordoftheday = str.indexOf('Word of the day');
+var indexofMeaning = str.indexOf('Meaning');
+var indexofExample = str.indexOf('Example');
+var indexofToastmaster = str.indexOf('Toastmaster');
+var indexofSpeaker1 = str.indexOf('Speaker 1');
+var indexofSpeaker2 = str.indexOf('Speaker 2');
+var indexofSpeaker3 = str.indexOf('Speaker 3');
+var indexofGeneralEvaluator = str.indexOf('General Evaluator');
+var indexofEvaluator1 = str.indexOf('Evaluator 1');
+var indexofEvaluator2 = str.indexOf('Evaluator 2');
+var indexofEvaluator3 = str.indexOf('Evaluator 3');
+var indexofTimer = str.indexOf('Timer');
+var indexofAhCounter = str.indexOf('Ah Counter');
+var indexofVoteCounter = str.indexOf('Vote Counter');
+var indexofGrammarian = str.indexOf('Grammarian');
+var indexofTableTopicsMaster = str.indexOf('TableTopics Master');
+var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
+
+
+                
+                
+                
+var extraDate = str.slice(indexofDate +4+4, indexofTheme-4);
+var extraTheme = str.slice(indexofTheme +5+4, indexofWordoftheday -5);
+var extraWordoftheday = str.slice(indexofWordoftheday +15+4, indexofMeaning -5);
+var extraMeaning = str.slice(indexofMeaning +7+4, indexofExample -5);
+var extraExample = str.slice(indexofExample +7+4, indexofToastmaster -5);
+var extraToastmaster = str.slice(indexofToastmaster +11+4, indexofSpeaker1 -5);
+var extraSpeaker1 = str.slice(indexofSpeaker1 +9+4, indexofSpeaker2 -5);
+var extraSpeaker2 = str.slice(indexofSpeaker2 +9+4, indexofSpeaker3 -5);
+var extraSpeaker3 = str.slice(indexofSpeaker3 +9+4, indexofGeneralEvaluator -5);
+var extraGeneralEvaluator = str.slice(indexofGeneralEvaluator +17+4, indexofEvaluator1 -5);
+var extraEvaluator1 = str.slice(indexofEvaluator1 +11+4, indexofEvaluator2 -5);
+var extraEvaluator2 = str.slice(indexofEvaluator2 +11+4, indexofEvaluator3 -5);
+var extraEvaluator3 = str.slice(indexofEvaluator3 +11+4, indexofTimer -5);
+var extraTimer = str.slice(indexofTimer +5+4, indexofAhCounter -5);
+var extraAhCounter = str.slice(indexofAhCounter +10+4, indexofVoteCounter -5);
+var extraVoteCounter = str.slice(indexofVoteCounter +12+4, indexofGrammarian -5);
+var extraGrammarian = str.slice(indexofGrammarian +10+4, indexofTableTopicsMaster -5);
+var extraTableTopicsMaster = str.slice(indexofTableTopicsMaster +18+4, indexofTableTopicsEvaluator -5);
+var extraTableTopicsEvaluator = str.slice(indexofTableTopicsEvaluator +21+4, str.length -4);
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+$Date.innerHTML = extraDate;
+$Theme.innerHTML = extraTheme;
+$Wordoftheday.innerHTML = extraWordoftheday;
+$Meaning.innerHTML = extraMeaning;
+$Example.innerHTML = extraExample;
+$Toastmaster.innerHTML = extraToastmaster;
+$Speaker1.innerHTML = extraSpeaker1;
+$Speaker2.innerHTML = extraSpeaker2;
+$Speaker3.innerHTML = extraSpeaker3;
+$GeneralEvaluator.innerHTML = extraGeneralEvaluator;
+$Evaluator1.innerHTML = extraEvaluator1;
+$Evaluator2.innerHTML = extraEvaluator2;
+$Evaluator3.innerHTML = extraEvaluator3;
+$Timer.innerHTML = extraTimer;
+$AhCounter.innerHTML = extraAhCounter;
+$VoteCounter.innerHTML = extraVoteCounter;
+$Grammarian.innerHTML = extraGrammarian;
+$TableTopicsMaster.innerHTML = extraTableTopicsMaster;
+$TableTopicsEvaluator.innerHTML = extraTableTopicsEvaluator;
+                
+             
+                
+                      
+                }).catch(err => {
+                    console.log('Error');
+                    console.log(err);
+                    $output.innerHTML = err.message;
+                })
+            }
+        }
+  
+  
+  </script>
+  
+</body>
+</html>
