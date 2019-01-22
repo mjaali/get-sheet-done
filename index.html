@@ -19,7 +19,6 @@
     </form>
     <div>
         <div id="output">
-output
       </div>
       
       
@@ -186,9 +185,8 @@ $TableTopicsEvaluator= document.getElementById('TableTopicsEvaluator');
                     console.log(data);
   
                 var str = JSON.stringify(data).replace("]", "").replace("[", "").replace(",", "").replace(":", "");
-              //  var str = JSON.stringify(data);
-
-                $output.innerHTML = str;
+     
+     // to view fill output           $output.innerHTML = str;
                 
 
 var indexofDate = str.indexOf('Date');
