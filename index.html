@@ -15,7 +15,7 @@
                 <input id="sheetNum" type="number" value="3"/>
                     <input type="radio" name="type" value="raw" checked/>
       </div>
-            <button type="submit">Go6</button>
+            <button type="submit">Go7</button>
     </form>
     <div>
         <div id="output">
@@ -215,25 +215,25 @@ var indexofTableTopicsEvaluator = str.indexOf('TableTopics Evaluator');
                 
                 
                 
-var extraDate = str.slice(indexofDate +4, indexofTheme);
-var extraTheme = str.slice(indexofTheme +5, indexofWordoftheday);
-var extraWordoftheday = str.slice(indexofWordoftheday +15, indexofMeaning);
-var extraMeaning = str.slice(indexofMeaning +7, indexofExample);
-var extraExample = str.slice(indexofExample +7, indexofToastmaster);
-var extraToastmaster = str.slice(indexofToastmaster +11, indexofSpeaker1);
-var extraSpeaker1 = str.slice(indexofSpeaker1 +9, indexofSpeaker2);
-var extraSpeaker2 = str.slice(indexofSpeaker2 +9, indexofSpeaker3);
-var extraSpeaker3 = str.slice(indexofSpeaker3 +9, indexofGeneralEvaluator);
-var extraGeneralEvaluator = str.slice(indexofGeneralEvaluator +17, indexofEvaluator1);
-var extraEvaluator1 = str.slice(indexofEvaluator1 +11, indexofEvaluator2);
-var extraEvaluator2 = str.slice(indexofEvaluator2 +11, indexofEvaluator3);
-var extraEvaluator3 = str.slice(indexofEvaluator3 +11, indexofTimer);
-var extraTimer = str.slice(indexofTimer +5, indexofAhCounter);
-var extraAhCounter = str.slice(indexofAhCounter +10, indexofVoteCounter);
-var extraVoteCounter = str.slice(indexofVoteCounter +12, indexofGrammarian);
-var extraGrammarian = str.slice(indexofGrammarian +10, indexofTableTopicsMaster);
-var extraTableTopicsMaster = str.slice(indexofTableTopicsMaster +18, indexofTableTopicsEvaluator);
-var extraTableTopicsEvaluator = str.slice(indexofTableTopicsEvaluator +21, str.length);
+var extraDate = str.slice(indexofDate +4+4, indexofTheme-4);
+var extraTheme = str.slice(indexofTheme +5+4, indexofWordoftheday -5);
+var extraWordoftheday = str.slice(indexofWordoftheday +15+4, indexofMeaning -5);
+var extraMeaning = str.slice(indexofMeaning +7+4, indexofExample -5);
+var extraExample = str.slice(indexofExample +7+4, indexofToastmaster -5);
+var extraToastmaster = str.slice(indexofToastmaster +11+4, indexofSpeaker1 -5);
+var extraSpeaker1 = str.slice(indexofSpeaker1 +9+4, indexofSpeaker2 -5);
+var extraSpeaker2 = str.slice(indexofSpeaker2 +9+4, indexofSpeaker3 -5);
+var extraSpeaker3 = str.slice(indexofSpeaker3 +9+4, indexofGeneralEvaluator -5);
+var extraGeneralEvaluator = str.slice(indexofGeneralEvaluator +17+4, indexofEvaluator1 -5);
+var extraEvaluator1 = str.slice(indexofEvaluator1 +11+4, indexofEvaluator2 -5);
+var extraEvaluator2 = str.slice(indexofEvaluator2 +11+4, indexofEvaluator3 -5);
+var extraEvaluator3 = str.slice(indexofEvaluator3 +11+4, indexofTimer -5);
+var extraTimer = str.slice(indexofTimer +5+4, indexofAhCounter -5);
+var extraAhCounter = str.slice(indexofAhCounter +10+4, indexofVoteCounter -5);
+var extraVoteCounter = str.slice(indexofVoteCounter +12+4, indexofGrammarian -5);
+var extraGrammarian = str.slice(indexofGrammarian +10+4, indexofTableTopicsMaster -5);
+var extraTableTopicsMaster = str.slice(indexofTableTopicsMaster +18+4, indexofTableTopicsEvaluator -5);
+var extraTableTopicsEvaluator = str.slice(indexofTableTopicsEvaluator +21+4, str.length -4);
                 
                 
                 
