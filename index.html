@@ -69,11 +69,11 @@
                     console.log('Data');
                     console.log(data);
                                
-                var str = JSON.stringify(data);
-        //        var strCon = str[0].concat(str[1], str[2]);
-                  var strCon = str.length;
+                var str = JSON.stringify(data).indexOf('Theme');
+             //   str.indexOf('Theme');
+            
                 
-                    $output.innerHTML = strCon;
+                    $output.innerHTML = str;
                       
                 }).catch(err => {
                     console.log('Error');
