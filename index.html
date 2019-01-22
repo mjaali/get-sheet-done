@@ -66,10 +66,22 @@
                         promise = GetSheetDone.raw(key, sheetNum);
                         break;
                 }
-                promise.then((data) => {
+              promise.then((data) => {
                     console.log('Data');
                     console.log(data);
-                    $output.innerHTML = JSON.stringify(data)[0][0].concat(JSON.stringify(data)[1][0], JSON.stringify(data)[2][0], JSON.stringify(data)[3][0])
+                
+                var divLength = $JSON.stringify(data).length;
+                
+                var str = '';
+for(var i=0; i<divLength; i++){
+  str += "Div #" + i + ", ";
+  console.log(str);
+}
+                
+                
+                
+                    $output.innerHTML = str;
+                      
                 }).catch(err => {
                     console.log('Error');
                     console.log(err);
